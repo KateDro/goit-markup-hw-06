@@ -502,8 +502,8 @@ footer {
   transition: border-color 250ms var(--transition-timing-func);
 }
 .footer-email-field:hover,
-.footer-email-fieldfocus {
-  border-color: #2196f3;
+.footer-email-field:focus {
+  border-color: var(--brand-color);
 }
 .footer-email-field::placeholder {
   position: absolute;
@@ -657,7 +657,7 @@ footer {
   border-radius: 50%;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: color 250ms var(--transition-timing-func);
+  transition: fill 250ms var(--transition-timing-func);
   fill: currentColor;
   cursor: pointer;
   background-color: var(--white-clr);
@@ -691,10 +691,6 @@ footer {
 .label-thumb {
   position: relative;
 }
-.label-thumb:hover,
-.label-thumb:focus {
-  color: var(--brand-color);
-}
 .modalwin-field {
   width: 448px;
   height: 40px;
@@ -708,11 +704,16 @@ footer {
 .input-field {
   width: 100%;
   height: 40px;
+  cursor: pointer;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px 12px 42px;
   outline: none;
   transition: border-color 250ms var(--transition-timing-func);
+}
+.input-field:hover,
+.input-field:focus {
+  border-color: var(--brand-color);
 }
 .input-icon {
   position: absolute;
@@ -773,10 +774,11 @@ footer {
   border-color: var(--header-textcolor);
   border-radius: 2px;
   margin-right: 7px;
-  transition: background-color 250ms var(--transition-timing-funct),
-    background-image 250ms var(--transition-timing-func),
-    border-color 250ms var(--transition-timing-func),
-    border 250ms var(--transition-timing-func);
+  transition: border-color 250ms var(--transition-timing-func);
+}
+.checkbox-mark:hover,
+.checkbox-mark:focus {
+  border-color: var(--brand-color);
 }
 .btn-send {
   font-weight: 700;
