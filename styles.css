@@ -524,9 +524,14 @@ footer {
   border-radius: 4px;
   color: var(--white-clr);
   background-color: var(--brand-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: color 250ms var(--transition-timing-func);
+  transition: box-shadow 250ms var(--transition-timing-func);
 }
+.btn-subscribe:hover,
+.btn-subscribe:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .subscribe-btn-txt {
   margin-right: 10px;
   font-weight: 700;
@@ -682,8 +687,13 @@ footer {
   flex-direction: column;
   margin-bottom: 10px;
 }
+
 .label-thumb {
   position: relative;
+}
+.label-thumb:hover,
+.label-thumb:focus {
+  color: var(--brand-color);
 }
 .modalwin-field {
   width: 448px;
@@ -726,7 +736,51 @@ footer {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+.checkbox {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.terms-link {
+  position: relative;
+  color: var(--brand-color);
+}
+.terms-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.7px;
+  background-color: var(--brand-color);
+}
+.checkbox-mark {
+  width: 16px;
+  height: 15px;
+  border: 2px solid;
+  border-color: var(--header-textcolor);
+  border-radius: 2px;
+  margin-right: 7px;
+  transition: background-color 250ms var(--transition-timing-funct),
+    background-image 250ms var(--transition-timing-func),
+    border-color 250ms var(--transition-timing-func),
+    border 250ms var(--transition-timing-func);
+}
 .btn-send {
   font-weight: 700;
   letter-spacing: 0.06em;
+  line-height: 1.88;
+  margin: 0 auto;
 }
