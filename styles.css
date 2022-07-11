@@ -646,8 +646,8 @@ footer {
   transition: transform 250ms var(--transition-timing-func);
 }
 .modal-btn-close {
-  position: absolute;
   display: flex;
+  position: absolute;
   justify-content: center;
   align-items: center;
   top: 8px;
@@ -657,10 +657,14 @@ footer {
   border-radius: 50%;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: fill 250ms var(--transition-timing-func);
   fill: currentColor;
   cursor: pointer;
   background-color: var(--white-clr);
+  transition: fill 250ms var(--transition-timing-func);
+}
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  fill: var(--brand-color);
 }
 .modalwin-form {
   display: flex;
@@ -690,6 +694,10 @@ footer {
 
 .label-thumb {
   position: relative;
+}
+.label-thumb:hover,
+.label-thumb:focus {
+  fill: var(--brand-color);
 }
 .modalwin-field {
   width: 448px;
@@ -754,19 +762,6 @@ footer {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.terms-link {
-  position: relative;
-  color: var(--brand-color);
-}
-.terms-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0.7px;
-  background-color: var(--brand-color);
-}
 .checkbox-mark {
   width: 16px;
   height: 15px;
@@ -779,6 +774,26 @@ footer {
 .checkbox-mark:hover,
 .checkbox-mark:focus {
   border-color: var(--brand-color);
+}
+.checkbox-input:checked + .checkbox-mark {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+  background-image: url(./images/img-icons/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.terms-link {
+  position: relative;
+  color: var(--brand-color);
+}
+.terms-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.7px;
+  background-color: var(--brand-color);
 }
 .btn-send {
   font-weight: 700;
