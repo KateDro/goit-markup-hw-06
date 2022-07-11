@@ -613,6 +613,7 @@ footer {
   padding: 6px 22px 6px 22px;
 }
 /* modal window */
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -657,7 +658,7 @@ footer {
   border-radius: 50%;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  fill: currentColor;
+
   cursor: pointer;
   background-color: var(--white-clr);
   transition: fill 250ms var(--transition-timing-func);
@@ -695,10 +696,6 @@ footer {
 .label-thumb {
   position: relative;
 }
-.label-thumb:hover,
-.label-thumb:focus {
-  fill: var(--brand-color);
-}
 .modalwin-field {
   width: 448px;
   height: 40px;
@@ -719,9 +716,13 @@ footer {
   outline: none;
   transition: border-color 250ms var(--transition-timing-func);
 }
-.input-field:hover,
-.input-field:focus {
+.label-thumb:hover .input-field,
+.label-thumb:focus-within .input-field {
   border-color: var(--brand-color);
+}
+.label-thumb:hover .input-icon,
+.label-thumb:focus-within .input-icon {
+  fill: var(--brand-color);
 }
 .input-icon {
   position: absolute;
